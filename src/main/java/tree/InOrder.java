@@ -18,6 +18,7 @@ public class InOrder {
     }
 
 
+    //非递归
     public void inOrder2(TreeNode t) {
         Deque<TreeNode> stack = new LinkedList<>();
         while (!stack.isEmpty() || t != null) {
