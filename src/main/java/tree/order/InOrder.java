@@ -1,4 +1,6 @@
-package tree;
+package tree.order;
+
+import tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Deque;
@@ -18,7 +20,7 @@ public class InOrder {
     }
 
 
-    //非递归
+    //迭代
     public void inOrder2(TreeNode t) {
         Deque<TreeNode> stack = new LinkedList<>();
         while (!stack.isEmpty() || t != null) {

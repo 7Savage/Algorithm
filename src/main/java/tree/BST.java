@@ -1,5 +1,7 @@
 package tree;
 
+import tree.TreeNode;
+
 public class BST {
     public final TreeNode rootNode;
 

@@ -1,9 +1,9 @@
 package tree;
 
 public class TreeNode {
-    Integer val;
-    TreeNode left;
-    TreeNode right;
+    public Integer val;
+    public TreeNode left;
+    public TreeNode right;
 
     public TreeNode(Integer val) {
         this.val = val;
