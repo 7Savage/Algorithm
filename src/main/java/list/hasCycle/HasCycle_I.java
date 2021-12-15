@@ -1,5 +1,7 @@
 package list.hasCycle;
 
+import list.ListNode;
+
 public class HasCycle_I {
     //判断是否有环
     public boolean hasCycle(ListNode head) {

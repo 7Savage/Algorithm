@@ -1,4 +1,4 @@
-package list;
+package list.lru;
 
 class Node {
     public int key, val;

@@ -1,5 +1,7 @@
 package list.hasCycle;
 
+import list.ListNode;
+
 public class HasCycle_II {
     //计算环的起点
     public ListNode detectCycle(ListNode head) {

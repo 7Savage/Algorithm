@@ -1,6 +1,8 @@
 package list.reverse;
 
 
+import list.ListNode;
+
 public class ReverseN {
     ListNode successor = null;
 

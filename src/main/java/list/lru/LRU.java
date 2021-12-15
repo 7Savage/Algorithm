@@ -1,4 +1,4 @@
-package list;
+package list.lru;
 
 public class LRU {
 }

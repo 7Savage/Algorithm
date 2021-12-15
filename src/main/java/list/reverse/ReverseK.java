@@ -1,5 +1,7 @@
 package list.reverse;
 
+import list.ListNode;
+
 public class ReverseK {
     //递归+迭代
     public ListNode reverseKGroup(ListNode head, int k) {

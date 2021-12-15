@@ -1,6 +1,7 @@
 package list.mergeLists;
 
 
+import list.ListNode;
 
 public class MergeTwoLists {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
