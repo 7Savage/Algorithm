@@ -1,6 +1,5 @@
 package list;
 
-import list.hasCycle.ListNode;
 
 public class RemoveNth {
     public ListNode removeNthFromEnd(ListNode head, int n) {
