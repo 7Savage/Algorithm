@@ -1,6 +1,8 @@
-package tree;
+package tree.avl;
 
-public class AVL {
+import tree.TreeNode;
+
+public class IsAvl {
     public boolean isBalanced(TreeNode root) {
         return dfs(root) != -1;
     }
@@ -16,5 +18,4 @@ public class AVL {
         if (right == -1) return -1;
         return Math.abs(left - right) < 2 ? (Math.max(left, right) + 1) : -1;
     }
-
 }
