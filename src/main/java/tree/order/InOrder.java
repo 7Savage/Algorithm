@@ -7,8 +7,9 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
+//中序遍历
 public class InOrder {
-    List<Integer> res = new ArrayList<>();
+    List<Long> res = new ArrayList<>();
 
     //递归
     public void inOrder(TreeNode t) {

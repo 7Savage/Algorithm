@@ -18,8 +18,8 @@ public class PostOrder {
     }
 
     //迭代
-    public List<Integer> postOrder2(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
+    public List<Long> postOrder2(TreeNode root) {
+        List<Long> res = new ArrayList<>();
         if (root == null) {
             return res;
         }

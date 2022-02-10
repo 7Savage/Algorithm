@@ -19,8 +19,8 @@ public class PreOrder {
     }
 
     //迭代
-    public List<Integer> preOrder2(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
+    public List<Long> preOrder2(TreeNode root) {
+        List<Long> res = new ArrayList<>();
         if (root == null) return res;
         Deque<TreeNode> stack = new LinkedList<>();
         stack.add(root);
