@@ -29,7 +29,7 @@ public class InOrder {
                 stack.add(t);
                 t = t.left;
             } else {
-                TreeNode node = stack.pollLast();
+                TreeNode node = stack.pollFirst();
                 res.add(node.val);
                 t = node.right;
             }

@@ -2,8 +2,9 @@ package tree.bst;
 
 import tree.TreeNode;
 
-public class InsertBST {
-    public TreeNode insertIntoBST(TreeNode root, int val) {
+public class InsertNode {
+    //迭代
+    public TreeNode insertIntoBST(TreeNode root, long val) {
         if (root == null) {
             return new TreeNode(val);
         }
@@ -30,7 +31,7 @@ public class InsertBST {
     }
 
     //递归
-    public TreeNode insertIntoBST2(TreeNode root, int val) {
+    public TreeNode insertIntoBST2(TreeNode root, long val) {
         // 找到空位置插入新节点
         if (root == null) return new TreeNode(val);
         // if (root.val == val)
