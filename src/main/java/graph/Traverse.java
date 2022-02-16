@@ -1,4 +1,4 @@
-package graph.traverse;
+package graph;
 
 import java.util.Deque;
 import java.util.LinkedList;
