@@ -14,7 +14,7 @@ public class PreInBuild {
             return null;
         }
 
-        int rootVal = preorder[preStart];
+        long rootVal = preorder[preStart];
         int index = -1;
         for (int i = inStart; i <= inEnd; i++) {
             if (inorder[i] == rootVal) {

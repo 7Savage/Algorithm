@@ -1,12 +1,11 @@
 package tree;
 
-
 import java.util.Deque;
 import java.util.LinkedList;
 
 public class InvertTree {
-    //递归
-    public TreeNode invertTree(TreeNode root) {
+    //递归，先序遍历
+    TreeNode invertTree(TreeNode root) {
         if (root == null) {
             return null;
         }
@@ -18,8 +17,9 @@ public class InvertTree {
         return root;
     }
 
-    //迭代
-    public TreeNode invertTree2(TreeNode root) {
+
+    //迭代，用栈模拟
+    TreeNode invertTree2(TreeNode root) {
         if (root == null) {
             return null;
         }

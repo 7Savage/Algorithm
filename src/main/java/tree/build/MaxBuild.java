@@ -13,7 +13,7 @@ public class MaxBuild {
         }
 
         int index = -1;
-        int max = Integer.MIN_VALUE;
+        long max = Integer.MIN_VALUE;
         for (int i = left; i <= right; i++) {
             if (nums[i] > max) {
                 max = nums[i];

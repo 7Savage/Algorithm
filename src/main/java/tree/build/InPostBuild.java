@@ -13,7 +13,7 @@ public class InPostBuild {
             return null;
         }
 
-        int rootVal = postorder[postEnd];
+        long rootVal = postorder[postEnd];
         int index = -1;
         for (int i = inStart; i <= inEnd; i++) {
             if (inorder[i] == rootVal) {
