@@ -8,7 +8,6 @@ public class RemoveNth {
         ListNode q = findFromEnd(dummy, n + 1);
         q.next = q.next.next;
         return dummy.next;
-
     }
 
     private ListNode findFromEnd(ListNode head, int k) {

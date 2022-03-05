@@ -1,6 +1,7 @@
 package swordtooffer;
 
-import org.junit.Test;
+
+import org.testng.annotations.Test;
 
 public class P14_II剪绳子II {
     public int cuttingRope(int n) {

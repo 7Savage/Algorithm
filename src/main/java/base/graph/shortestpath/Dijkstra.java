@@ -35,7 +35,7 @@ public class Dijkstra {
             for (int[] neighbor : graph[curNodeID]) {
                 int nextNodeID = neighbor[0];
                 int distToNextNode = distTo[curNodeID] + neighbor[1];
-                // 更新 dp table
+                // 更新 base.dp table
                 if (distTo[nextNodeID] > distToNextNode) {
                     distTo[nextNodeID] = distToNextNode;
                     pq.offer(new State(nextNodeID, distToNextNode));
