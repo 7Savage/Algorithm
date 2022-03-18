@@ -78,7 +78,7 @@ public class BinarySearch {
      * @return
      */
     public int[] searchRange(int[] nums, int target) {
-        return new int[]{leftBound(nums,target),rightBound(nums,target)};
+        return new int[]{leftBound(nums, target), rightBound(nums, target)};
     }
 
     /**
@@ -95,7 +95,35 @@ public class BinarySearch {
      * @return
      */
     public int minEatingSpeed(int[] piles, int h) {
+        int left = 1;
+        int right = 10 ^ 9;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (h == func(piles, mid)) {
+                right = mid - 1;
+            } else if (h > func(piles, mid)) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
 
+    /**
+     * @param piles 香蕉堆
+     * @param x     速度
+     * @return 所花费的时间
+     */
+    public int func(int[] piles, int x) {
+        int hours = 0;
+        for (int i = 0; i < piles.length; i++) {
+            hours += piles[i] / x;
+            if (piles[i] % x > 0) {
+                hours++;
+            }
+        }
+        return hours;
     }
 
     /**
@@ -110,7 +138,7 @@ public class BinarySearch {
      * @return
      */
     public int shipWithinDays(int[] weights, int days) {
-
+        return 0;
     }
 
     /**
@@ -123,6 +151,6 @@ public class BinarySearch {
      * @return
      */
     public int splitArray(int[] nums, int m) {
-
+        return 0;
     }
 }
