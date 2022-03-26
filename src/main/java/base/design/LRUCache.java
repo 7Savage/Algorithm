@@ -3,23 +3,24 @@ package base.design;
 import java.util.HashMap;
 import java.util.Map;
 
-class DLinkNode {
-    DLinkNode pre;
-    DLinkNode next;
-    int key;
-    int value;
 
-    public DLinkNode() {
-    }
-
-    public DLinkNode(int key, int value) {
-        this.key = key;
-        this.value = value;
-    }
-}
 
 
 class LRUCache {
+    class DLinkNode {
+        DLinkNode pre;
+        DLinkNode next;
+        int key;
+        int value;
+
+        public DLinkNode() {
+        }
+
+        public DLinkNode(int key, int value) {
+            this.key = key;
+            this.value = value;
+        }
+    }
 
     int size;
     int capacity;

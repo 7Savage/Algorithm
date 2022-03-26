@@ -1,4 +1,4 @@
-package base.backtrack;
+package base.backtrack.subsets;
 
 public class CanPartitionKSubsets {
     /**

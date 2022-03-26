@@ -8,6 +8,11 @@ import java.util.List;
 public class DifferentBST {
     int[][] memo;
 
+    /**
+     * 给你一个整数 n ，求恰由 n 个节点组成且节点值从 1 到 n 互不相同的 二叉搜索树 有多少种？返回满足题意的二叉搜索树的种数。
+     * @param n
+     * @return
+     */
     public int numTrees(int n) {
         memo = new int[n + 1][n + 1];
         return count(1, n);
@@ -31,6 +36,11 @@ public class DifferentBST {
         return res;
     }
 
+    /**
+     * 给你一个整数 n ，请你生成并返回所有由 n 个节点组成且节点值从 1 到 n 互不相同的不同 二叉搜索树 。可以按 任意顺序 返回答案。
+     * @param n
+     * @return
+     */
     public List<TreeNode> generateTrees(int n) {
         if (n == 0) {
             return new LinkedList<>();

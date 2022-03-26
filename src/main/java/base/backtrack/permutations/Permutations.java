@@ -1,10 +1,9 @@
-package base.backtrack;
+package base.backtrack.permutations;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Permute {
+public class Permutations {
     List<List<Integer>> res = new LinkedList<>();
 
     List<List<Integer>> permute(int[] nums) {

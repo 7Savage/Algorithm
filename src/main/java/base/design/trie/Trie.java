@@ -1,4 +1,4 @@
-package base.design;
+package base.design.trie;
 
 public class Trie {
     Trie[] child;

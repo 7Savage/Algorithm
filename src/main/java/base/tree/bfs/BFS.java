@@ -1,4 +1,4 @@
-package base.tree.order;
+package base.tree.bfs;
 
 import base.tree.TreeNode;
 
@@ -7,6 +7,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class BFS {
+    /**
+     * 时间复杂度：每个点进队出队各一次，故渐进时间复杂度为 O(n)。
+     * 空间复杂度：队列中元素的个数不超过 n 个，故渐进空间复杂度为 O(n)。
+     * @param root
+     */
     public void levelOrder(TreeNode root) {
         Deque<TreeNode> queue = new LinkedList<>();
         if (root == null) {

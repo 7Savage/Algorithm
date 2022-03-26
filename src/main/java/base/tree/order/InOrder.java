@@ -12,6 +12,12 @@ public class InOrder {
     List<Long> res = new ArrayList<>();
 
     //递归
+
+    /**
+     * 时间复杂度为O(n)   T(n)=2T(n/2)+1=2(2T(n/4)+1)+1=2^logn+2^(logn-1)+...+2+1 ~= n
+     * 所以空间复杂度为O(n)
+     * @param t
+     */
     public void inOrder(TreeNode t) {
         if (t != null) {
             inOrder(t.left);
@@ -21,7 +27,12 @@ public class InOrder {
     }
 
 
-    //迭代
+    /**
+     * 时间复杂度为O(n)
+     * 空间复杂度为O(n)
+     *
+     * @param t
+     */
     public void inOrder2(TreeNode t) {
         Deque<TreeNode> stack = new LinkedList<>();
         while (!stack.isEmpty() || t != null) {

@@ -87,4 +87,38 @@ public class Difference {
         }
         return true;
     }
+
+    class Solution {
+        public boolean carPooling(int[][] trips, int capacity) {
+            //确定数组长度
+            int last = 0;
+            for (int[] trip : trips) {
+                int last1 = trip[2] ;//终点
+                last = Math.max (last, last1);
+            }
+
+            int[] nums = new int[last];
+            //确定旅客人数
+            for (int[] trip : trips) {
+                int val = trip[0];
+                int i = trip[1] ;
+                int j = trip[2] - 1;
+                nums[i] += val;
+                if (j < last -1) {
+                    nums[j + 1] -= val;
+                }
+            }
+            for (int i = 1; i < last; i++) {
+                nums[i] += nums[i - 1];
+            }
+            //比较旅客人数与核载人数
+            for(int i : nums){
+                if (i > capacity) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    }
 }
