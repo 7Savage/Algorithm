@@ -31,13 +31,29 @@ public class QuickSort {
 
     /**
      * 给定整数数组 nums 和整数 k，请返回数组中第 k 个最大的元素。
-     *
+     * <p>
      * 请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。
+     *
      * @param nums
      * @param k
      * @return
      */
+    int target;
+
     public int findKthLargest(int[] nums, int k) {
-        return 0;
+        target = nums.length - k;
+        quickSort(nums, 0, nums.length - 1);
+        return nums[target];
+    }
+
+    public void quickSort(int[] nums, int left, int right) {
+        if (left < right) {
+            int mid = partition(nums, left, right);
+            if (target == mid) {
+                return;
+            }
+            quickSort(nums, left, mid - 1);
+            quickSort(nums, mid + 1, right);
+        }
     }
 }
