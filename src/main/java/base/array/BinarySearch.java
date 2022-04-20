@@ -25,6 +25,7 @@ public class BinarySearch {
     }
 
     //寻找左边界
+    //如果没有找到，nums[left]就是第一个比target大的
     public int leftBound(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;

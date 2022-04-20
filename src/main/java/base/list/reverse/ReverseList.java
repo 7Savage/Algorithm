@@ -17,15 +17,17 @@ public class ReverseList {
         return prev;
     }
 
+    //递归
     public ListNode reverseList2(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
-        }
-        ListNode last = reverseList2(head.next);
-        head.next.next = head;
-        head.next = null;
-        return last;
+        return recur(head, null);    // 调用递归并返回
     }
+    private ListNode recur(ListNode cur, ListNode pre) {
+        if (cur == null) return pre; // 终止条件
+        ListNode res = recur(cur.next, cur);  // 递归后继节点
+        cur.next = pre;              // 修改节点引用指向
+        return res;                  // 返回反转链表的头节点
+    }
+
 
 
 }

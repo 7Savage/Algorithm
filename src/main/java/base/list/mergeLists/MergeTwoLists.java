@@ -4,6 +4,7 @@ package base.list.mergeLists;
 import base.list.ListNode;
 
 public class MergeTwoLists {
+    //用伪节点穿针补线
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(-1);
         ListNode p = dummy;

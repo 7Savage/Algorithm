@@ -1,9 +1,18 @@
 package base.math;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.Stack;
 
+
 public class PowMod {
+    @Test
+    public void testMod() {
+        System.out.println(-7 / 4); // -1
+        System.out.println(-7 % 4); // -3
+    }
+
     int base = 1337;
 
     /**
@@ -56,4 +65,5 @@ public class PowMod {
             return sub * sub % base;
         }
     }
+
 }

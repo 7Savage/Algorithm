@@ -1,5 +1,7 @@
 package base.sort;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 
 /**
@@ -35,9 +37,15 @@ public class MergeSort {
         while (j <= right) {
             temp[k++] = arr[j++];
         }
-        for (i = 0; i < k; i++) {
+        for (i = 0; i < temp.length; i++) {
             arr[left + i] = temp[i];
         }
+    }
+
+    @Test
+    public void test() {
+        int[] nums = {7, 5, 6, 4};
+        mergeSort(nums, 0, nums.length - 1);
     }
 
 }

@@ -5,6 +5,56 @@ import org.testng.annotations.Test;
 import java.util.*;
 
 public class SlidingWindow {
+    //给你一个整数数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。
+    //
+    //返回 滑动窗口中的最大值 。
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        MonotonicQueue window = new MonotonicQueue();
+        List<Integer> list = new ArrayList<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            if (i < k -1 ) {
+                window.push(nums[i]);
+            } else {
+                window.push(nums[i]);
+                list.add(window.max());
+                window.pop(nums[i - k + 1]);
+            }
+        }
+        int[] res = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            res[i] = list.get(i);
+        }
+        return res;
+    }
+
+    //单调队列，队头存储最大值
+    class MonotonicQueue {
+        Deque<Integer> queue;
+
+        public MonotonicQueue() {
+            queue = new LinkedList<>();
+        }
+
+        public void push(int x) {
+            while (!queue.isEmpty() && x > queue.getLast()) {
+                queue.removeLast();
+            }
+            queue.addLast(x);
+        }
+
+        public void pop(int x) {
+            //如果队首的元素不是最大值，说明在push阶段已经被移除了
+            if (x == queue.getFirst()) {
+                queue.removeFirst();
+            }
+        }
+
+        public int max() {
+            return queue.getFirst();
+        }
+    }
+
     /**
      * 给你一个字符串 s 、一个字符串 t 。返回 s 中涵盖 t 所有字符的最小子串。如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串 "" 。
      *

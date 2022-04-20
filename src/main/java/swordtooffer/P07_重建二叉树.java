@@ -6,6 +6,24 @@ package swordtooffer;
  */
 public class P07_重建二叉树 {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        return null;
+        return build(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
+    }
+
+    public TreeNode build(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd) {
+        if (preStart > preEnd) {
+            return null;
+        }
+        int index = -1;
+        int rootVal = preorder[preStart];
+        TreeNode root = new TreeNode(rootVal);
+        for (int i = 0; i < inorder.length; i++) {
+            if (inorder[i] == rootVal) {
+                index = i;
+                break;
+            }
+        }
+        root.left = build(preorder, preStart+1, preStart + (index - inStart), inorder, inStart, index - 1);
+        root.right = build(preorder, preStart + (index - inStart + 1), preEnd, inorder, index + 1, inEnd);
+        return root;
     }
 }

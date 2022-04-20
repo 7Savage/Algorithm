@@ -5,8 +5,8 @@ import java.util.List;
 
 /**
  * 给定一个不含重复数字的数组 nums ，返回其 所有可能的全排列 。你可以 按任意顺序 返回答案。
- *
- * 元素有重不可复选
+ * <p>
+ * 元素无重不可复选
  */
 public class Permutations {
     List<List<Integer>> res = new LinkedList<>();

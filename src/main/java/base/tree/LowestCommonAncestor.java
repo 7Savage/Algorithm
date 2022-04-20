@@ -16,6 +16,8 @@ public class LowestCommonAncestor {
     //用于判断节点是否访问过的集合
     Set<TreeNode> visited = new HashSet<>();
 
+    //时间复杂度：O(N)
+    //空间复杂度：O(N)
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         dfs(root);
         while (p != null) {

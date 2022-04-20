@@ -1,5 +1,7 @@
 package base.backtrack.permutations;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -41,6 +43,12 @@ public class PermutationsII {
             track.removeLast();
             used[i] = false;
         }
+    }
+
+    @Test
+    public void test(){
+        List<List<Integer>> lists = permuteUnique(new int[]{1, 1, 2});
+        System.out.println(lists);
     }
 
 
