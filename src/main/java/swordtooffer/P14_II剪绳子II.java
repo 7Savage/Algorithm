@@ -20,7 +20,7 @@ public class P14_II剪绳子II {
         int a = n / 3 - 1;
         //快速幂求余,rem = (x^a) % p
         while (a > 0) {
-            //当 a 是奇数，
+            //当 a 是奇数
             if (a % 2 == 1) rem = (rem * x) % p;
             x = (x * x) % p;
             //a除以2

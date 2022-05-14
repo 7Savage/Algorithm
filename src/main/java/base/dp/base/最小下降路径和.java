@@ -8,9 +8,8 @@ import java.util.Arrays;
  * 下降路径 可以从第一行中的任何元素开始，并从每一行中选择一个元素。在下一行选择的元素和当前行所选元素最多相隔一列（即位于正下方或者沿对角线向左或者向右的第一个元素）。
  * 具体来说，位置 (row, col) 的下一个元素应当是 (row + 1, col - 1)、(row + 1, col) 或者 (row + 1, col + 1) 。
  */
-public class MinimumFallingPathSum {
+public class 最小下降路径和 {
     int[][] memo;
-
     //时间复杂度：O(N^2)
     public int minFallingPathSum(int[][] matrix) {
         int res = Integer.MAX_VALUE;

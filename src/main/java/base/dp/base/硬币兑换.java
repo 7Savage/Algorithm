@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class CoinChange {
+public class 硬币兑换 {
 
     int[] memo;
 

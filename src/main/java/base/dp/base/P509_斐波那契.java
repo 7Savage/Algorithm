@@ -7,7 +7,7 @@ package base.dp.base;
  * F(n) = F(n - 1) + F(n - 2)，其中 n > 1
  * 给定 n ，请计算 F(n) 。
  */
-public class FibonacciNumber {
+public class P509_斐波那契 {
 
     /**
      * 暴力递归，子问题重复
