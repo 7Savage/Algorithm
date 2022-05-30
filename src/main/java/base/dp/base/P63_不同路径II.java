@@ -25,8 +25,8 @@ public class P63_不同路径II {
         for (int j = 0; j < n && obstacleGrid[0][j] == 0; j++) {
             dp[0][j] = 1;
         }
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
                 if (obstacleGrid[i][j] == 1) {
                     continue;
                 }
