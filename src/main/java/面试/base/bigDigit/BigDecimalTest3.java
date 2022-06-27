@@ -1,8 +1,7 @@
-package 面试.bigDigit;
+package 面试.base.bigDigit;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Objects;
 
 public class BigDecimalTest3 {
     public static void main(String[] args) {

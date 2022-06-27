@@ -1,4 +1,4 @@
-package 面试;
+package 面试.base;
 
 public class GenericTest {
     //静态的方法的加载就已经完成了，所以静态泛型方法是没有办法使用类上声明的泛型的。只能使用自己声明的 <E>

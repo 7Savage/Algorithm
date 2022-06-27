@@ -1,4 +1,4 @@
-package 面试;
+package 面试.base;
 
 import org.junit.Test;
 //值传递 ：方法接收的是实参值的拷贝，会创建副本。

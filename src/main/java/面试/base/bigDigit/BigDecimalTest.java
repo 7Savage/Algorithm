@@ -1,4 +1,4 @@
-package 面试.bigDigit;
+package 面试.base.bigDigit;
 
 public class BigDecimalTest {
     public static void main(String[] args) {

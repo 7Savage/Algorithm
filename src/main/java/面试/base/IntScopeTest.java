@@ -1,4 +1,4 @@
-package 面试;
+package 面试.base;
 
 public class IntScopeTest {
     public static void main(String[] args) {
