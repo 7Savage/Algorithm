@@ -56,6 +56,7 @@ public class P10_I斐波那契数列 {
     /**
      * 时间复杂度 O(N) ： 计算 f(n) 需循环 n 次，每轮循环内计算操作使用 O(1) 。
      * 空间复杂度 O(1) ： 几个标志变量使用常数大小的额外空间。
+     *
      * @param n
      * @return
      */
@@ -74,16 +75,35 @@ public class P10_I斐波那契数列 {
         return sum;
     }
 
+    public int fib5(int n) {
+        if (n < 2) {
+            return n;
+        }
+
+        int[] dp = new int[n + 1];
+        dp[0] = 0;
+        dp[1] = 1;
+        for (int i = 2; i < dp.length; i++) {
+            dp[i] = (dp[i - 1] + dp[i - 2]) % 1000000007;
+        }
+        return dp[n];
+    }
+
+    public void test() {
+
+    }
 
 
     /**
      * 时间复杂度：O(logn)。
-     *
+     * <p>
      * 空间复杂度：O(1)。
+     *
      * @param n
      * @return
      */
     static final int MOD = 1000000007;
+
     public int fib4(int n) {
         if (n < 2) {
             return n;
@@ -114,7 +134,6 @@ public class P10_I斐波那契数列 {
         }
         return c;
     }
-
 
 
 }
