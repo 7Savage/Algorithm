@@ -2,6 +2,7 @@ package 面试.jvm;
 
 import org.junit.Test;
 
+//Interned String就是确保字符串在内存里只有一份拷贝，这样可以节约内存空间，加快字符串操作任务的执行速度
 public class InternTest {
     public static void main(String[] args) {
         String s = new String("1");
