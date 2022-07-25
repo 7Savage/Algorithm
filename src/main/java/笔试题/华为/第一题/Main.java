@@ -1,4 +1,4 @@
-package 笔试题.Day0330_华为.第一题;
+package 笔试题.华为.第一题;
 
 import java.util.*;
 public class Main {

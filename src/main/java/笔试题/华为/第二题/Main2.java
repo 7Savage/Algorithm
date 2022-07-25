@@ -1,4 +1,4 @@
-package 笔试题.Day0330_华为.第二题;
+package 笔试题.华为.第二题;
 
 import java.util.Scanner;
 

@@ -1,10 +1,6 @@
 package base.dp.base;
 
-import 笔试题.Day0330_华为.第三题.Main;
-
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
 public class 硬币兑换 {
 
