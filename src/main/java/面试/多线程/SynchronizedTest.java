@@ -25,8 +25,15 @@ public class SynchronizedTest {
         }
     }
 
-    // 5.关键字在代码块上，锁为括号里面的对象
+    //5. 锁为括号里面的对象，与上面的方法等价
     public void blockLock3() {
+        synchronized (SynchronizedTest.class) {
+            // code
+        }
+    }
+
+    // 6.关键字在代码块上，锁为括号里面的对象
+    public void blockLock4() {
         Object o = new Object();
         synchronized (o) {
             // code

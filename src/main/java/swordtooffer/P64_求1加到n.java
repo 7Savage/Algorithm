@@ -17,6 +17,7 @@ public class P64_求1加到n {
     //时间复杂度 O(n)： 计算 n + (n-1) + ... + 2 + 1n+(n−1)+...+2+1 需要开启 n 个递归函数。
     //空间复杂度 O(n) ： 递归深度达到 n ，系统使用 O(n) 大小的额外空间。
     public int sumNums2(int n) {
+        // 当 n = 1 时 n > 1 不成立 ，此时 “短路” ，终止后续递归
         boolean x = (n > 1 && sumNums2(n - 1) > 0);
         res += n;
         return res;

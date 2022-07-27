@@ -22,8 +22,7 @@ public class P57_II和为s的连续正数序列 {
             if (s >= target) {
                 s -= i;
                 i++;
-            }
-            if (s < target) {
+            }else{
                 j++;
                 s += j;
             }

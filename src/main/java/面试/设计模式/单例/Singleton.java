@@ -10,7 +10,7 @@ public class Singleton {
 
     public static Singleton getInstance() {
         if (singleton == null) {                // 1.第一次检查
-            synchronized (Singleton.class) {    // 2.在Singleton类对象上加锁
+            synchronized (Singleton.class) {    // 2.在Singleton类对象上加锁，只要是这个类产生的对象，在调用这个方法时都会产生互斥
                 if (singleton == null) {        // 3.第二次检查
                     // 这行代码在编译后分为三步执行，为了禁止重排序使用volatile：
                     // 1.为对象分配内存空间

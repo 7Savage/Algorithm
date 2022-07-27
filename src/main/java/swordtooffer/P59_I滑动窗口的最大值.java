@@ -1,9 +1,6 @@
 package swordtooffer;
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class P59_I滑动窗口的最大值 {
     //时间复杂度 O(n) ： 其中 n 为数组 nums 长度；线性遍历 nums 占用 O(n)；每个元素最多仅入队和出队一次，因此单调队列 deque 占用 O(2n) 。

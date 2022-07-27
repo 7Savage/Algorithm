@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<config>
+    <className>面试.设计模式.工厂方法.FileLoggerFactory</className>
+</config>
