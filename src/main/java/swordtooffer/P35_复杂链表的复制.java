@@ -54,8 +54,7 @@ public class P35_复杂链表的复制 {
             cur = cur.next;
             pre = pre.next;
         }
-        // 该步多余，只是为了将两条链表完全分开
-        // pre.next = null;
+        pre.next = null;
         return head.next;
     }
 }
