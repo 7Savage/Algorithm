@@ -1,4 +1,4 @@
-package base.dp.基础;
+package base.dp.子序列;
 
 import java.util.Arrays;
 
@@ -7,7 +7,7 @@ import java.util.Arrays;
  * <p>
  * 子序列 是由数组派生而来的序列，删除（或不删除）数组中的元素而不改变其余元素的顺序。例如，[3,6,2,7] 是数组 [0,3,1,6,2,2,7] 的子序列。
  */
-public class 最长严格递增子序列 {
+public class P300_最长严格递增子序列 {
     //时间复杂度 O(N^2)
     public int lengthOfLIS(int[] nums) {
         int n = nums.length;

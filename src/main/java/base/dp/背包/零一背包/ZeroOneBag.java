@@ -1,4 +1,4 @@
-package base.dp.背包.zero1背包;
+package base.dp.背包.零一背包;
 
 public class ZeroOneBag {
     public static void main(String[] args) {
