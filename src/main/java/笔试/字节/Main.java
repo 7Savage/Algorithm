@@ -1,8 +1,6 @@
-package 笔试.志杰;
+package 笔试.字节;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
