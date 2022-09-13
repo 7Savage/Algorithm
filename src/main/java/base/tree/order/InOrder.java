@@ -1,15 +1,14 @@
 package base.tree.order;
 
-import base.tree.TreeNode;
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
+
+import swordtooffer.TreeNode;
+
+import java.util.*;
 
 //中序遍历
 public class InOrder {
-    List<Long> res = new ArrayList<>();
+    List<Integer> res = new ArrayList<>();
 
     //递归
 
@@ -27,24 +26,19 @@ public class InOrder {
     }
 
 
-    /**
-     * 时间复杂度为O(n)
-     * 空间复杂度为O(n)
-     *
-     * @param t
-     */
-    public void inOrder2(TreeNode t) {
-        Deque<TreeNode> stack = new LinkedList<>();
-        while (!stack.isEmpty() || t != null) {
-            if (t != null) {
-                stack.add(t);
-                t = t.left;
-            } else {
-                TreeNode node = stack.pollFirst();
-                res.add(node.val);
-                t = node.right;
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        while (!stack.isEmpty() || root != null) {
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
             }
+            TreeNode node = stack.pop();
+            res.add(node.val);
+            root = node.right;
         }
+        return res;
     }
 
 

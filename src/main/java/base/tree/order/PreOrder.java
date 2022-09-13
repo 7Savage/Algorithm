@@ -1,11 +1,10 @@
 package base.tree.order;
 
-import base.tree.TreeNode;
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
+
+import swordtooffer.TreeNode;
+
+import java.util.*;
 
 public class PreOrder {
 
@@ -18,21 +17,17 @@ public class PreOrder {
         }
     }
 
-    //迭代
-    public List<Long> preOrder2(TreeNode root) {
-        List<Long> res = new ArrayList<>();
-        if (root == null) return res;
-        Deque<TreeNode> stack = new LinkedList<>();
-        stack.add(root);
-        while (!stack.isEmpty()) {
-            TreeNode node = stack.pollLast();
-            res.add(node.val);
-            if (node.right != null) {
-                stack.add(node.right);
+    public List<Integer> preorderTraversal(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<>();
+        List<Integer> res = new ArrayList<>();
+        while (!stack.isEmpty() || root != null) {
+            while (root != null) {
+                res.add(root.val);
+                stack.push(root);
+                root = root.left;
             }
-            if (node.left != null) {
-                stack.add(node.left);
-            }
+            TreeNode node = stack.pop();
+            root = node.right;
         }
         return res;
     }
